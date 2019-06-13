@@ -85,7 +85,7 @@ import { getCaretCoordinates } from './caret-coords';
   template: `
     <ng-template #defaultItemTemplate let-item="item">
     <img [src]="item.imagePath" width="34" height="34" *ngIf="item.imagePath" class="item-avatar">
-    {{item['name'] && item['name'] || ''}} {{ item['name'] && ('(@'+item[labelKey] + ')' || item[labelKey])}}
+    {{item['name'] && item['name'] || ''}} {{ (item['name'] && ('(@'+item[labelKey] + ')') || item[labelKey])}}
     </ng-template>
     <div #list [hidden]="hidden" class="dropdown-menu scrollable-menu">
       <div class="menu-content">
